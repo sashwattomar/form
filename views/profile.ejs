@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form project</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+   <!-- css -->
+   <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body style="background-color:#f5f5f5;">
+    <h1 style="text-align: center;">Profile page</h1>
+   
+<div class="container emp-profile"style="background-color:#f5f5f5; margin-top:20px; margin-left:50px;margin-right:50px;" >
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-img">
+
+                            <img name="userimg" src=" /foldername/<%=image%>" alt="profile image" style="border-radius:50%;margin-left: 100px; height: 160px;  width:160px;margin-top:50px;">
+                            <!-- <div class="" style="width: 60px;">
+                               Change Photo
+                               <input type="file" name="file"/>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="profile-head" style="padding-top: 80px; padding-left: 30px;">
+                                    <h3 style="margin-top: 5px;">
+                                        <%= name %> 
+                                    </h3>
+                                    <h6 style="margin-top: 20px;margin-bottom: 20px;">
+                                        Web Developer 
+                                    </h6>
+                                    <!--<p class="proile-rating">RANKINGS : <span>8/10</span></p>-->
+                             
+                       
+             <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><h6>About</h6></a>
+                                </li> 
+                                <!--<li class="nav-item">-->
+                                <!--    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Timeline</a>-->
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                 
+                </div>
+                <form  onsubmit="save()" action="/formchanges" method="POST" > 
+                <div class="row">
+                    <div class="col-md-4" style="margin-top: 30px; padding-left: 30px;">
+                        <div class="profile-work">
+                            <p>WORK LINK</p>
+                        <a href="https://www.linkedin.com/in/sashwat-tomar-040b201aa/">linkidin profile</a><br/>
+                                    <!-- <p>SKILLS</p> 
+                                   <div id="job-results">
+              
+                                   </div><br/> -->
+                 
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-md-6 ">
+                                                <label><h6><em>Username:</em></h6></label>
+                                            </div>
+                                            <div class="col-md-6 visible">
+                                                <p > <%=username  %>  </p>
+                                            </div>
+                                            <div class="col-md-6  forhide hide">
+                                                <input style="width:300px;height:30px;" type="text" name="userusername" value="<%=username  %>">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label><h6><em>Name:</em></h6></label>
+                                            </div>
+                                            <div class="col-md-6 visible">
+                                                <p > <%= name %>  </p>
+                                            
+                                            </div>
+                                            <div class="col-md-6  forhide hide">
+                                                <input style="width:300px;height:30px;" name="username" type="text" value="<%=name  %>">
+                                            
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label><h6><em>Email:</em></h6></label>
+                                            </div>
+                                            <div class="col-md-6 visible">
+                                                <p > <%= email %>  </p>
+                                               
+                                            </div>
+                                            <div class="col-md-6  forhide hide">
+                                                <input style="width:300px;height:30px;" name="useremail" type="text" value="<%=email  %>">
+                                               
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label><h6><em>Contact:</em></h6></label>
+                                            </div>
+                                            <div class="col-md-6 visible">
+                                                <p><%=contact%></p>
+                                             
+                                            </div>
+                                            <div class="col-md-6  forhide hide">
+                                                <input style="width:300px;height:30px;" name="usercontact" type="text" value="<%=contact  %>">
+                                             
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label><h6><em>Password:</em></h6></label>
+                                            </div>
+                                            <div class="col-md-6 visible">
+                                                <p > <%= password %>  </p>
+                                              
+                                            </div>
+                                            <div class="col-md-6  forhide hide">
+                                                <input style="width:300px;height:30px;" name="userpassword" type="text" value="<%=password  %>">
+                                              
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label><h6><em>Adhar:</em></h6></label>
+                                            </div>
+                                            <div class="col-md-6 visible">
+                                                <p > <%= adhar %>  </p>
+                                              
+                                            </div>
+                                            <div class="col-md-6  forhide hide">
+                                                <input style="width:300px;height:30px;" name="useradhar" type="text" value="<%=adhar  %>">
+                                              
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label><h6><em>Address:</em></h6></label>
+                                            </div>
+                                            <div class="col-md-6 visible">
+                                                <p > <%= address %>  </p>
+                                              
+                                            </div>
+                                            <div class="col-md-6  forhide hide">
+                                                <input style="width:300px;height:30px;" name="useraddress" type="text" value="<%=address  %>">
+                                              
+                                            </div>
+                                        </div>
+                                
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <input type="hidden" name="userid" value="<%= id %>">
+<button type="button" class="btn btn-primary savebtn" onclick="addplaceholder()" style="display: inline-block;margin-right: 10px;">Edit Profile</button>   
+<!-- <button type="button"  class="btn btn-primary" style="display:inline-block;margin-left:10px;"-->
+    <!-- <a href="/generateReport"  alt="ahrefdownloadpdfbtn" name="pdfbutton" value="<%=id%>" > Download PDF</a> -->
+
+                </div>
+
+            </form > 
+        </div>
+        <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/js/homepage.js"></script>
+
+</body>
+</html>

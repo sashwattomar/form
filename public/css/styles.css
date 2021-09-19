@@ -1,0 +1,25 @@
+.create-account-page{
+    display: none;
+   
+}
+.login-page{
+    display: none;
+    
+
+}
+.hide{
+    display:none;
+}
+.backgroundcolor{
+    background-color: white;
+}
+/* .marginadjust{ */
+    /* margin-top:100px; */
+
+/* } */
+.modalbodynew{
+    overflow-y:inherit;
+}
+#api{
+    display: none;
+}

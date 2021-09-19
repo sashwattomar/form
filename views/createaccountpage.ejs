@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+        <div class="span12">
+            <div class="marginadjust" id="loginModal">
+              <div class="modal-body modalbodynew">
+                <div class="well" style="margin-bottom: 0px; width:1000px; height:800px;">
+                  
+                  <!-- <div  id="myTabContent" class="tab-content "> -->
+                    
+                    <div  id="login">
+                      <form id="tab" onsubmit="return vallidator();" action="/" method="POST"  enctype="multipart/form-data">
+                           
+                        <div id="nameid">
+                        <label for="name"><h4>Complete Name:</h4></label>
+                        <input style="width:600px; " id="names" type="text" name="name" class="input-xlarge"  required >
+                        <span style="color:red;" name="namespan"></span>
+                       </div>
+
+                       <div id="imageid">
+                        <label for="userimage"><h4>Upload Image:</h4></label>
+                        <input style="width:600px; " type="file"   class="input-xlarge"name="userimage"  required >
+                        <span ><h6> *image size must be lesser than 3MB</h6></span>
+                      </div > 
+                     
+                       
+                       <div id="usernameid">
+                        <label for="username"><h4>Username:</h4></label>
+                        <input style="width:600px; margin-left: 10px;  " type="text" name="username" class="input-xlarge"  required >
+                        <span style="color:red;"  class="usernamespan"> </span>
+                       </div>
+                      
+                       <div id="contactid">
+                        <label for="contact"><h4>Contact:</h4></label>
+                        <input style="width:600px; " id="contacts" type="text" name="contact" class="input-xlarge"  required >
+                        <span style="color:red;" name="contactspan"></span>
+                      </div>
+
+                      <div id="passwordid">
+                        <label for="password"><h4>Password:</h4></label>
+                        <input style="width:600px; " type="text" name="password" class="input-xlarge"  required >
+                        <span style="color:red;" name="passwordspan"></span>
+                      </div>
+                      <div id="adharid">
+                        <label for="adhar"><h4>Adhar Number:</h4></label>
+                        <input style="width:600px; " type="text" name="adhar"  class="input-xlarge"  required >
+                        <span style="color:red;" name="adharspan"></span>
+                      </div>
+                        
+                     <div id="emailid">
+                      <label for="email" ><h4>Email:</h4></label>
+                      <input style="width:600px; " type="text" name="email" class="input-xlarge"  required >
+                      <span style="color:red;" name="emailspan"></span>
+                      </div>      
+                      
+                      
+                       
+                       <div id="adressid">
+                        <label for="address"><h4>Address:</h4></label>
+                        <input  style="width:600px; "  type="text" name="address" class="input-xlarge"  required >
+                        <span style="color:red;" name="addressspan"></span>
+                       </div>
+                        
+                     <input type="hidden" name="googleidd" value="<%= dn %>">
+                        
+                        
+                          <input style="margin-top: 10px;" id="account" class="btn btn-primary" type="submit" value= "Create Account"> 
+                      </form>
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                      <!-- <script src="/js/homepage.js" charset="utf-8"></script> -->
+                      <script src="/js/homepage.js"></script>
+</body>
+</html>
